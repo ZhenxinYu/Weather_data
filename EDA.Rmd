@@ -1,0 +1,104 @@
+---
+title: "1-9"
+author: "Amy"
+date: "1/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r library, message = FALSE}
+library(tidyverse)
+library(stringr)
+library(latticeExtra)
+library(gtable)
+library(grid)
+```
+
+```{r load in data}
+nibrs <- readRDS("~/Desktop/1-9/nibrs_county_state_week_crime.rds")
+ucr <- readRDS("~/Desktop/1-9/ucr_data_2010_2016_complete_group_county.rds")
+
+#weather data
+weather_bm <- read_csv("/Users/yuzhenxin/Desktop/weather_bm.csv")
+weather_bw <- read_csv("/Users/yuzhenxin/Desktop/weather_bw.csv")
+```
+
+```{r dataset preparation}
+nibrs$num_week <- (nibrs$event_week - 1) %% 53 + 1
+nibrs$fips <- as.integer(nibrs$state_county_fip)
+
+ucr$fips <- sprintf('%05d', ucr$state_county_fips)
+
+weather_bm$year <- as.character(weather_bm$year)
+```
+
+```{r ucr weather merge}
+ucr_weather <- ucr %>% 
+  left_join(weather_bm, by = c("state_county_fips"="FIPS", "year"="year", "month"="month"))
+```
+
+```{r nibrs weather merge}
+nibrs_weather <- nibrs %>% 
+  left_join(weather_bw, by = c("fips"="FIPS", "event_year"="year", "num_week"="week"))
+```
+
+
+#NIBRS description
+```{r}
+######MA
+p1 <-nibrs_weather %>%
+  filter(state_county_fip == "25001")
+#total crime
+obj1 <- xyplot(total_crime ~ event_week, p1, type = "l" , lwd=2)
+obj2 <- xyplot(TMAX_mean ~ event_week, p1, type = "l", lwd=2)
+
+doubleYScale(obj1, obj2, add.ylab2 = TRUE)
+#crime with gun
+obj1 <- xyplot(crime_w_gun ~ event_week, p1, type = "l" , lwd=2)
+obj2 <- xyplot(TMAX_mean ~ event_week, p1, type = "l", lwd=2)
+
+doubleYScale(obj1, obj2, add.ylab2 = TRUE)
+#violent crime gun
+obj1 <- xyplot(violent_crime_gun ~ event_week, p1, type = "l" , lwd=2)
+obj2 <- xyplot(TMAX_mean ~ event_week, p1, type = "l", lwd=2)
+
+doubleYScale(obj1, obj2, add.ylab2 = TRUE)
+#total crime vs PRCP
+obj3 <- xyplot(total_crime ~ event_week, p1, type = "l" , lwd=2)
+obj4 <- xyplot(PRCP_mean ~ event_week, p1, type = "l", lwd=2)
+
+doubleYScale(obj3, obj4, add.ylab2 = TRUE)
+
+
+#########################TX 
+p2 <-nibrs_weather %>%
+  filter(state_county_fip == "48027")
+#total crime
+obj3 <- xyplot(total_crime ~ event_week, p2, type = "l" , lwd=2)
+obj4 <- xyplot(TMAX_mean ~ event_week, p2, type = "l", lwd=2)
+
+doubleYScale(obj3, obj4, add.ylab2 = TRUE)
+
+#crime with gun
+obj3 <- xyplot(crime_w_gun ~ event_week, p2, type = "l" , lwd=2)
+obj4 <- xyplot(TMAX_mean ~ event_week, p2, type = "l", lwd=2)
+
+doubleYScale(obj3, obj4, add.ylab2 = TRUE)
+#violent crime gun
+obj3 <- xyplot(violent_crime_gun ~ event_week, p2, type = "l" , lwd=2)
+obj4 <- xyplot(TMAX_mean ~ event_week, p2, type = "l", lwd=2)
+
+doubleYScale(obj3, obj4, add.ylab2 = TRUE)
+#total crime vs PRCP
+obj3 <- xyplot(total_crime ~ event_week, p2, type = "l" , lwd=2)
+obj4 <- xyplot(PRCP_mean ~ event_week, p2, type = "l", lwd=2)
+
+doubleYScale(obj3, obj4, add.ylab2 = TRUE)
+
+```
+
+
+
