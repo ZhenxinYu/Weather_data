@@ -1,5 +1,11 @@
 # Weather Data
-Scrape weather data from NOAA; Use Google Map API to match the station with county; Analyze weather data with gun-crime data
+
+## Objective
+* Scrape weather data from NOAA
+* Fetch FIPS and county information from Area and Census Clock API
+* Use Google Map API to match the station with county
+* Analyze weather data with gun-crime data
+
 
 ## Data Source
 
