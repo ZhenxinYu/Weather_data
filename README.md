@@ -4,6 +4,7 @@
 * Scrape weather data from NOAA
 * Fetch FIPS and county information from Area and Census Clock API
 * Use Google Map API to match the station with county
+* Merge the weather data and geographical data
 * Analyze weather data with gun-crime data
 
 
