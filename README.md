@@ -8,8 +8,15 @@
 * Merge the weather data and geographical data
 * Analyze weather data with gun-crime data
 
+## 2.Prerequisite
+1. [Python3](https://www.python.org/downloads/)
+2. [Pandas](https://pypi.org/project/pandas/)
+3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)
+Optional
+4. [tqdm](https://github.com/tqdm/tqdm)
 
-## 2. Data Source
+
+## 3. Data Source
 
 ### 2.1. Weather Data
 **National Oceanic and Atmospheric Administration (NOAA)** provides current and history climate data via web request.  
