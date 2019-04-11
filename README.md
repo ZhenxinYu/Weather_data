@@ -11,19 +11,19 @@
 ## 2.Prerequisite
 1. [Python3](https://www.python.org/downloads/)
 2. [Pandas](https://pypi.org/project/pandas/)
-3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)
+3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)  
 Optional
 4. [tqdm](https://github.com/tqdm/tqdm)
 
 
 ## 3. Data Source
 
-### 2.1. Weather Data
+### 3.1. Weather Data
 **National Oceanic and Atmospheric Administration (NOAA)** provides current and history climate data via web request.  
 [NCDC Web Services Documentation](https://www.ncdc.noaa.gov/cdo-web/webservices/v2)  
 ![NOAA Icon](https://nsd.rdc.noaa.gov/images/NOAA_emblem.png)  
 
-### 2.2. Geograpchical Data
+### 3.2. Geograpchical Data
 **Federal Communications Commission (FCC)** provides FIPS code and county information.  
 [Area and Census Block API](https://geo.fcc.gov/api/census/)  
 ![FCC Icon](https://www.duluthnewstribune.com/sites/default/files/styles/16x9_620/public/fieldimages/1/1024/fcclogo.jpg?itok=G_A0TSxp)  
