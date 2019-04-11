@@ -14,6 +14,7 @@
 3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)  
 Optional
 4. [tqdm](https://github.com/tqdm/tqdm)
+5. [Rstudio](https://www.rstudio.com/)
 
 
 ## 3. Data Source
