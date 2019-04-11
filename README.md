@@ -41,7 +41,7 @@
 3. Store all the result into correspond county subdirectory. 
 
 ### 4.2. weather gather & process.ipynb
-4. Other way to get NCDC weather data is download through [ftp server](ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/).
+4. Other way to get NCDC weather data is download through ftp server. (ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/)
 5. Merge the weather data with station infromation
 6. Use FCC API to get the FIPS code and county name
 7. Use Google Map API to get the zipcode
