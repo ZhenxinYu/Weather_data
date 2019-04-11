@@ -9,8 +9,8 @@
 * Analyze weather data with gun-crime data
 
 ## 2.Prerequisite
-1. [Python3](https://www.python.org/downloads/)
-2. [Pandas](https://pypi.org/project/pandas/)
+1. [Python3](https://www.python.org/downloads/){:target="_blank"}
+2. [Pandas](https://pypi.org/project/pandas/){:target="_blank"}
 3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)  
 **Optional**
 4. [tqdm](https://github.com/tqdm/tqdm)
