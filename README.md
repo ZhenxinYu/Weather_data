@@ -12,7 +12,7 @@
 1. [Python3](https://www.python.org/downloads/)
 2. [Pandas](https://pypi.org/project/pandas/)
 3. [Google Map API](https://github.com/googlemaps/google-maps-services-python)  
-Optional
+**Optional**
 4. [tqdm](https://github.com/tqdm/tqdm)
 5. [Rstudio](https://www.rstudio.com/)
 
@@ -21,6 +21,7 @@ Optional
 
 ### 3.1. Weather Data
 **National Oceanic and Atmospheric Administration (NOAA)** provides current and history climate data via web request.  
+We can use   
 [NCDC Web Services Documentation](https://www.ncdc.noaa.gov/cdo-web/webservices/v2)  
 ![NOAA Icon](https://nsd.rdc.noaa.gov/images/NOAA_emblem.png)  
 
